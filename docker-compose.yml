@@ -1,8 +1,12 @@
 version: '3.8'
 
 services:
-  fronts:
+  front:
     build: .
     container_name: front
     restart: always
 
+networks:
+  default:
+    external:
+      name: my_network
